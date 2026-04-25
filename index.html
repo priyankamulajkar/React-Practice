@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="rootHTML"><p>Hello</p></div>
+    <div id="rootreact"></div>
+    <div id="rootpara"></div>
+    <div class="rootclass"></div>
+    <div class="rootclass2"></div>
+    <div class="rootclass3"></div>
+    <div class="rootbyclass"></div>
+   <div class="rootbyclass2"></div>
+
+   <!-- App.js code elements rendered from below id -->
+   <div id="root"><h1>Hello World</h1></div>
+   <div id="root2"><h1>Welcome to React JS</h1></div>
+
+</script>
+    <script>
+        // By using Javascript
+        
+        // For id
+        const heading = document.createElement('h1');
+        heading.innerHTML = "Heading for the HTML";
+        document.getElementById("rootHTML").appendChild(heading);
+        
+            /*const div = document.getElementById("rootHTML");
+
+            const h1 = document.createElement("h1");
+            h1.textContent = "Heading";
+
+            // Different ways
+            div.append(h1);       // end
+            div.prepend(h1);
+            // h1.remove();*/
+
+         // Single element for the class
+         const heading3 = document.createElement('h2');
+         heading3.innerText = "Heading for class";
+         document.getElementsByClassName('rootclass')[0].appendChild(heading3);
+
+        // Multiple elements
+        const heading4 = document.createElement('h3');
+        heading4.innerText = 'Heading for Multiple elements by class';
+       const elements = document.getElementsByClassName('rootclass2')
+       for(let el of elements){
+        el.appendChild(heading4.cloneNode(true)); //cloneNode(true) is important, otherwise it will move the same element.
+       }
+
+
+       // Use querySelector----Returns first matching element directly -- ✔️ Cleaner code
+       const heading5 = document.createElement('h4');
+       heading5.innerHTML = "Heading using Queriselector for class";
+       document.querySelector('.rootclass3').appendChild(heading5);
+    </script>
+    <script>
+
+
+    // By using React
+      const heading2 = React.createElement('h1', {}, "Heading from React");
+      const root = ReactDOM.createRoot(document.getElementById('rootreact'));
+      root.render(heading2);
+
+      const para = React.createElement('p', {}, "Paragraph from React");
+      const rootpara = ReactDOM.createRoot(document.getElementById('rootpara'));
+      rootpara.render(para);
+
+      const headingbyclass = React.createElement('h2', {}, "Heading for react by class");
+      const rootClass = ReactDOM.createRoot(document.getElementsByClassName('rootbyclass')[0]);
+      rootClass.render(headingbyclass);
+
+      const headingByClass2 = React.createElement('h3', {}, "Heading for react by class 2");
+      const rootheadclass2 = ReactDOM.createRoot(document.querySelector('.rootbyclass2'));
+      rootheadclass2.render(headingByClass2);
+
+    </script>
+    <script src="app.js"></script>
+   
+</body>
+</html>
