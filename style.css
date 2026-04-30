@@ -67,7 +67,8 @@ header .row {
 
 .res-img{
     width: 100%;
-    height: auto;
+    min-height: 320px;
+    object-fit: cover;
   display: block;
   border-radius: 16px;
     filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 2px 8px);
@@ -90,6 +91,15 @@ h4.res-rating {
 h4.res-rating img {
     width: 15px;
     margin-right: 4px;
+}
+.res-desc, .res-place {
+    color: rgba(2, 6, 12, 0.6);
+}
+.res-card {
+    margin-bottom: 30px;
+}
+.res-desc {
+    margin-bottom: 5px;
 }
 @media (max-width: 768px) {
   .col-md-3,
