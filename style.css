@@ -1,3 +1,100 @@
-#heading8{
-    color:blueviolet;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Questrial", sans-serif; 
+}
+.heading8 {
+  color: blueviolet;
+}
+.container {
+  max-width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.col-md-3,
+.col-md-9 {
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-md-3 {
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.col-md-9 {
+  -ms-flex: 0 0 75%;
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.logo-img {
+  width: 115px;
+  height: auto;
+  display: block;
+}
+
+.nav-items ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-items li {
+  margin-left: 20px;
+}
+header {
+    padding: 10px 0;
+    box-shadow: 0px 1px 12px 0px #99969685;
+}
+header .row {
+    justify-content: center;
+    align-items: center;
+}
+
+.res-img{
+    width: 100%;
+    height: auto;
+  display: block;
+  border-radius: 16px;
+    filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 2px 8px);
+}
+.top-restaurants {
+    padding: 100px 0;
+}
+h2.res-name {
+    color: rgba(2, 6, 12, 0.92);
+    font-size: 18px;
+    margin-top: 20px;
+}
+h4.res-rating {
+    color: rgba(2, 6, 12, 0.92);
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+h4.res-rating img {
+    width: 15px;
+    margin-right: 4px;
+}
+@media (max-width: 768px) {
+  .col-md-3,
+  .col-md-9 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
