@@ -8,6 +8,7 @@ const Header = () => {
         <div className="">
           <img className="w-[150px]" src={LOGO_URL}></img>
         </div>
+        {console.log("re-rendering Header Component")}
         <nav
           className={`duration-300 md:w-auto w-[80%] md:h-auto h-screen md:p-0 p-3 md:bg-transparent bg-[#4d879d] md:static fixed top-0 ${isOpen ? "left-0" : "left-[-100%]"} z-9`}
         >
