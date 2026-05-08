@@ -9,7 +9,7 @@ const stylecard = {}
     props?.resObj?.info;
   return (
     <div className="mb-6" style={stylecard}>
-        <img className="rounded-xl object-cover mb-5 min-h-[349px]" src={RES_URL + cloudinaryImageId}></img>
+        <img className="rounded-xl object-cover mb-5 md:min-h-[349px] min-h-auto" src={RES_URL + cloudinaryImageId}></img>
         <h2 className="text-[18px] font-medium text-[#02060ceb]">{name}</h2>
         <h4 className="flex text-[16px] font-[400] text-[#02060ceb]">
           <img className="w-[15px] object-contain mr-2" src={Res_Rating_URL}></img>
